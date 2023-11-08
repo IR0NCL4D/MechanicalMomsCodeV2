@@ -28,7 +28,7 @@ public class RobotContainer {
   private final CommandXboxController m_driverController =
       new CommandXboxController(OperatorConstants.kDriverControllerPort);
 
-  RunCommand driveCommand = new RunCommand(()-> m_DriveTrain.drive(m_driverController.getLeftY(),m_driverController.getRightX()), m_DriveTrain)
+  RunCommand driveCommand = new RunCommand(()-> m_DriveTrain.drive(m_driverController.getLeftY(),m_driverController.getRightX()), m_DriveTrain);
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -47,12 +47,12 @@ public class RobotContainer {
    */
   private void configureBindings() {
     // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
-    new Trigger(m_DriveTrain::exampleCondition)
-        .onTrue(new ExampleCommand(m_DriveTrain));
+  //  new Trigger(m_DriveTrain::exampleCondition)
+  //      .onTrue(new ExampleCommand(m_DriveTrain));
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
-    m_driverController.b().whileTrue(m_DriveTrain.exampleMethodCommand());
+  //  m_driverController.b().whileTrue(m_DriveTrain.exampleMethodCommand());
   }
 
   /**
@@ -62,6 +62,7 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An example command will be run in autonomous
-    return Autos.exampleAuto(m_DriveTrain);
+  //  return Autos.exampleAuto(m_DriveTrain);
+    return null;
   }
 }

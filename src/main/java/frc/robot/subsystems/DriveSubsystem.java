@@ -13,7 +13,7 @@ public class DriveSubsystem extends SubsystemBase{
 
 
     /** Creates a new driveTrain. */
-    public TankSub() {
+    public DriveSubsystem() {
 
         // inverting motor outputs to prevent the robot from spinning in place
         frontLeft.setInverted(InvertType.InvertMotorOutput);
