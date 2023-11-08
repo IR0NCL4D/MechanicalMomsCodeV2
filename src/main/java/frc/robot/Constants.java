@@ -16,4 +16,14 @@ public final class Constants {
   public static class OperatorConstants {
     public static final int kDriverControllerPort = 0;
   }
+  public static class motorConstant {
+    //right motors
+    public static final int frontRightMotorConstant = 1;
+    public static final int backRightMotorConstant = 1;
+    //left motors
+    public static final int frontLeftMotorConstant = 1;
+    public static final int backLeftMotorConstant = 1;
+    //gyro constants
+    public static final double gyro_kP = 0.005;
+  }
 }
